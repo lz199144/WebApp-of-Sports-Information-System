@@ -1,0 +1,129 @@
+﻿        <ul id="ScheduleDetailShowList" data-role="listview">
+            <li>
+                <img src="image/TE/spbutt_100xTE.gif" />
+                <center>
+                    <div class="ui-grid-a">                        
+	                    <div class="ui-block-a">中华人民共和国第十二届运动会</div>
+	                    <div class="ui-block-b"><%=tplData.ScheduleHead.BASE1_DisciplineShortName  %></div>
+                        <div class="ui-block-a"><%=tplData.ScheduleHead.StartDate  %>实时成绩</div>                        
+                        <div class="ui-block-b"><%=tplData.ScheduleHead.BASE1_EventLangName  %></div>
+	                    <div class="ui-block-a"><%=tplData.ScheduleHead.BASE1_VenueLongName  %></div>
+                        <div class="ui-block-b"><%=tplData.ScheduleHead.CRS_ScheduleName  %></div>                   
+                    </div>
+                </center>
+            </li>  
+            <%if (tplData.ScheduleHead.BASE1_EventCode.match('TEW303') != null
+                    || tplData.ScheduleHead.BASE1_EventCode.match('TEM313') != null) {%>                                        
+            <li data-role="list-divider" >   
+                <center> 
+                    <div class="ui-grid-c">                        
+	                    <div class="ui-block-a">阶段</div>
+	                    <div class="ui-block-b">场次</div>
+                        <div class="ui-block-c">开始时间</div>
+                        <div class="ui-block-d">持续时间</div>
+                        <div class="ui-block-a">A队单位</div>
+	                    <div class="ui-block-b">B队单位</div>
+                        <div class="ui-block-c">总比分</div>
+                        <div class="ui-block-d">获胜方</div>                      
+                    </div> 
+                </center>               
+            </li>
+            <div data-role="collapsible-set">
+                <%for( var i=0;i< tplData.ScheduleDetailList.length;i++) { 
+                    var aItem = tplData.ScheduleDetailList[i];  %>
+	                <div data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d">
+	                    <h3>
+                            <center>
+                                <div class="ui-grid-c">
+	                                <div class="ui-block-a"><%=aItem.Phase %></div>
+	                                <div class="ui-block-b"><%=aItem.Match %></div>
+                                    <div class="ui-block-c"><%=aItem.StartTime %></div>
+                                    <div class="ui-block-d"><%=aItem.DuringTime %></div>
+                                    <div class="ui-block-a"><%=aItem.DelegationName_A %></div>
+	                                <div class="ui-block-b"><%=aItem.DelegationName_B %></div>
+                                    <div class="ui-block-c"><%=aItem.Result %></div>
+                                    <div class="ui-block-d"><%=aItem.Winner %></div>
+                                </div>
+                            </center>
+                        </h3>                        
+	                    <p>
+                            <ul data-role="listview">
+                                <li data-role="list-divider"  data-theme = "e">
+                                    <center>     
+                                        <div class="ui-grid-c">
+	                                        <div class="ui-block-a">A队运动员 </div>
+	                                        <div class="ui-block-b">B队运动员</div>
+                                            <div class="ui-block-c">项目</div>
+                                            <div class="ui-block-d">总比分</div>
+                                            <div class="ui-block-a">第一局</div>
+	                                        <div class="ui-block-b">第二局</div>
+                                            <div class="ui-block-c">第三局</div>
+                                        </div>
+                                    </center>      
+                                </li>
+                                <%for( var j=0;j< aItem.Row1.length;j++) { 
+                                    var bItem = aItem.Row1[j];  %>                        
+                                <li>
+                                    <center>
+                                        <div class="ui-grid-c">
+	                                        <div class="ui-block-a"><%=bItem.AthleteNameA %></div>
+	                                        <div class="ui-block-b"><%=bItem.AthleteNameB %></div>
+                                            <div class="ui-block-c"><%=bItem.Item %></div>
+                                            <div class="ui-block-d"><%=bItem.Result %></div>
+                                            <div class="ui-block-a"><%=bItem.Result1 %></div>
+	                                        <div class="ui-block-b"><%=bItem.Result2 %></div>
+                                            <div class="ui-block-c"><%=bItem.Result3 %></div>
+                                        </div>
+                                    </center>
+                                </li>
+                                <%} %>
+                            </ul>
+                        </p>
+
+	                </div>
+                <%} %>    	                                                             
+            </div>
+            <%} else { %>
+                <li data-role="list-divider">   
+                    <center> 
+                        <div class="ui-grid-d">                        
+	                        <div class="ui-block-a">阶段</div>
+	                        <div class="ui-block-b">场次</div>
+                            <div class="ui-block-c">开始时间</div>
+                            <div class="ui-block-d">持续时间</div>                            
+                            <div class="ui-block-a">A队单位</div>
+	                        <div class="ui-block-b">A队运动员</div>
+                            <div class="ui-block-c">第一局</div>
+                            <div class="ui-block-d">第二局</div>
+                            <div class="ui-block-e">第三局</div>
+                            <div class="ui-block-a">B队单位</div>
+	                        <div class="ui-block-b">B队运动员</div>
+                            <div class="ui-block-c">总比分</div>
+                            <div class="ui-block-d">获胜方</div>                      
+                        </div> 
+                    </center>               
+                </li>
+                <%for( var i=0;i< tplData.ScheduleDetailList.length;i++) { 
+                    var aItem = tplData.ScheduleDetailList[i]; %>
+                    <li>   
+                        <center> 
+                            <div class="ui-grid-d">                        
+	                            <div class="ui-block-a"><%=aItem.Phase %></div>
+	                            <div class="ui-block-b"><%=aItem.Match %></div>
+                                <div class="ui-block-c"><%=aItem.StartTime %></div>
+                                <div class="ui-block-d"><%=aItem.DuringTime %></div>                                
+                                <div class="ui-block-a"><%=aItem.DelegationName_A %></div>
+	                            <div class="ui-block-b"><%=aItem.AthleteNameA %></div>
+                                <div class="ui-block-c"><%=aItem.Result1 %></div>
+                                <div class="ui-block-d"><%=aItem.Result2 %></div>
+                                <div class="ui-block-e"><%=aItem.Result3 %></div>
+                                <div class="ui-block-a"><%=aItem.DelegationName_B %></div>
+	                            <div class="ui-block-b"><%=aItem.AthleteNameB %></div>
+                                <div class="ui-block-c"><%=aItem.Result %></div>
+                                <div class="ui-block-d"><%=aItem.Winner %></div>                      
+                            </div> 
+                        </center>               
+                    </li>
+                <%} %>
+            <%} %>
+        </ul>

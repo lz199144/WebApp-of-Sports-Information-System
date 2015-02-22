@@ -1,0 +1,6 @@
+﻿
+    <%for(var i=0; i<tplData.length; i++) {
+        var aItem = tplData[i];%>
+        <a href="#" data-mini = true data-theme="e" data-role="button"  data-icon= "arrow-r" data-iconpos="right" data-inline="true"
+          onclick="App.Modules.Delegation.MemberLoad(<%=aItem.SEQ_PersonID %>);"><%=aItem.SEQ_PersonName %></a>
+    <%} %>

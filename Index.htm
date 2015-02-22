@@ -1,0 +1,325 @@
+﻿ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+<!--浏览器设置-->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1, maximum-scale=1" /> 
+
+<!--SDK及插件-->           
+        <script src="sdk/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>  
+        <script src="sdk/jqmsdk/jquery.mobile-1.3.1.min.js" type="text/javascript"></script>
+        <link href="sdk/jqmsdk/jquery.mobile-1.3.1.min.css" rel="stylesheet" type="text/css" />
+        <script src="app/common.js" type="text/javascript"></script>
+        <script src="sdk/plugIn/baiduTpls.js" type="text/javascript"></script>
+
+<!--App Modules-->
+        <script src="app/app.js" type="text/javascript"></script>       
+        <script src="app/Modules/TEIndex.js" type="text/javascript"></script>
+        <script src="app/Modules/TESchedule.js" type="text/javascript"></script>
+        <script src="app/Modules/TEDelegation.js" type="text/javascript"></script>
+        <script src="app/Modules/TEMedal.js" type="text/javascript"></script>
+
+        <style>
+            #imgIndexLogo { margin-left:auto; margin-right:auto; margin-top:40px; width:140px; height:140px}
+            .clear{ clear:both; width:0px; height:0px}
+        </style>
+        <title></title>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#pageIndex').live('tap', App.Modules.Index.OnTap);
+            $('#pageMember').live('pageshow', App.Modules.Delegation.Load);
+            $('#pageMedal').live('pageshow', App.Modules.Medal.Load);
+        });
+    </script>
+
+</head>
+<body>
+    <div id="pageIndex" data-role="page" >
+        <div data-role="header" data-position="fixed"  data-theme="c">
+            <h1>网球赛事成绩系统</h1>
+        </div>
+        <center>
+            <div data-role="content" > 
+                <p></br></br></br></br></p>                 
+                <img src="Image/TE/TE.gif" id="imgIndexLogo" /> 
+                <h4>网球比赛移动终端</h4>
+                <p></br></p>
+            </div>
+        </center>
+        <div data-role="footer" data-position="fixed"  data-theme="c">
+            <h1>河海大学</h1>
+        </div>
+    </div>    
+
+    <div id="pageIntroduce" data-role="page">
+        <div data-id="header"  data-role="header" data-theme="c" data-position="fixed">
+            <h1>网球</h1>
+            <a href="#" data-role="button" data-align="left" data-rel="back" data-icon="back" data-iconpos="left" class="ui-btn-left">返回</a>
+            <a href="" data-role="button" data-align="right" data-icon="refresh" data-iconpos="right" class="ui-btn-right">刷新</a>
+        </div>    
+        <div id="TE_Introduce" data-role="content" >
+            <div data-id="Introduce" data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d" >
+                <h3>网球简介</h3>
+                    <p>    网球是一项优美而激烈的体育运动，网球运动的由来和发展可以用四句话来概括：孕育在法国，诞生在英国，开始普及和形成高潮在美国，现在盛行全世界，被称为世界第二大球类运动。
+                    <p>    网球通常在两个单打球员(haobc)或两对双打组合之间进行。球员在网球场上隔着球网用网球拍击打空心橡胶球。</p>
+                    <p>    现代网球运动诞生于19世纪的英国伯明翰。在20世纪中，网球在世界各地得到广泛发展，并成为一项世界性的体育运动。最受关注的网球比赛是每年举办的四项网球四大满贯赛事。</p>
+                    <p>    现代网球运动开展的初期，妇女常被排斥在外，其理由是网球运动不适合于妇女。同时认为妇女参加网球运动，有伤风化。因此早期的网球比赛只设有男子单打和双打两项，不设女子网球项目。但是一些女选手不仅敢于冲破社会舆论和家庭的阻挠，而且技术水平有的还超过了男选手。在一些非正规的单打比赛中常常出现一边是男选手、另一边是女选手的情况。这才迫使一些网球俱乐部不得不破除这一禁令，允许妇女参加这一运动。所以从1879年开始诞生了男女混合双打比赛，这是妇女自身努力奋斗的结果。</p>
+                    <p>    1878年，第一次男子双打锦标赛在英格兰举行。1879年，第一次女子单打和混合双打比赛在爱尔兰举行。1884年，温布尔登增加了女子单打和男子双打锦标赛。1913年又增加了女双和混双锦标赛。</p>
+                    <p>    1881年，世界上出现了第一个全国性的网球协会，即美国全国草地网球协会（“全国”两字于1920年取消）。该会于当年8月31日至9月3日，在罗得岛纽波特港举行第一届美国草地网球男子单打和男子双打锦标赛，采用了温布尔登的比赛规则，参加比赛的有26人。</p>
+                    <p>    美国全国草地网协主席德怀特和美国男单冠军西尔斯，也是最早参加温布尔登锦标赛的海外运动员。1887年，开始举行美国草地网球女子单打锦标赛，女子双打和混合双打分别开始于1890年和1892年。1891年，法国首次举行男子单打和男子双打锦标赛，参加者限于法国公民，女子单打始于1897年。</p>
+            </div>
+            <div data-id="SportRule" data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d">
+                <h3>网球比赛规则</h3>
+                      <p>    发球员在发球前应先站在端线后、中点和边线的假定延长线之间的区域里，用手将球向空中任何方向抛起，在球接触地面以前，用球拍击球（仅能用一只手的运动员，可用球拍将球抛起）。球拍与球接触时，就算完成球的发送。</p>
+                      <p>    发球员在整个发球动作中，不得通过行走或跑动改变原站的位置，两脚只准站在规定位置，不得触及其他区域。</p>
+                      <p>    每局开始，先从右区端线后发球，得或失一分后，应换到左区发球。
+发出的球应从网上越过，落到对角的对方发球区内，或其周围的线上</p>
+                      <p>    未击中球；发出的球，在落地前触及固定物（球网、中心带和网边白布除外)；违反发球站位规定。发球员第一次发球失误后，应在原发位置上进行第二次发球。</p>
+                      <p>    发球触网后，仍然落到对方发球区内，接球员未作好接球准备；均应重发球。</p>
+                      <p>    第一局比赛终了，接球员成为发球员，发球成为接球。以后每局终了。均依次互相交换，直至比赛结束。</p>                 
+            </div>                  
+        </div>      
+        <div data-id="footer" data-role="footer"  data-theme="c" data-position="fixed">
+            <div data-role="navbar">
+                <ul >
+                    <li><a href="#pageIntroduce" class="ui-btn-active ui-state-persist">项目简介</a></li>
+                    <li><a href="#pageSchedule" data-transition="flow">单项成绩</a></li>
+                    <li><a href="#pageMember" data-transition="flow">参赛人员</a></li>
+                    <li><a href="#pageMedal" data-transition="flow">奖牌统计</a></li>
+                    <li><a href="#pageMore" data-transition="flow">更多</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="pageSchedule" data-role="page">
+        <div data-id="header"  data-role="header" data-theme="c" data-position="fixed">
+            <h1>单项成绩</h1>
+            <a href="#" data-role="button" data-align="left" data-rel="back" data-icon="back" data-iconpos="left" class="ui-btn-left">返回</a>
+            <a href="" data-role="button" data-align="right" data-icon="refresh" data-iconpos="right" class="ui-btn-right">刷新</a>
+        </div>
+        <div id="TE_Schedule" data-role="content">
+            <div data-id="ScheduleByEvent" data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d">
+                <h3>按网球小项查看</h3>      
+                    <p><a href="" data-role="button" data-icon= "arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('TEW303');">女子团体</a></p>
+                    <p><a href="" data-role="button" data-icon= "arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('TEM313');">男子团体</a></p>
+                    <p><a href="" data-role="button" data-icon= "arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('TEW202');">女子双打</a></p>
+                    <p><a href="" data-role="button" data-icon= "arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('TEM212');">男子双打</a></p>
+                    <p><a href="" data-role="button" data-icon= "arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('TEW001');">女子单打</a></p>
+                    <p><a href="" data-role="button" data-icon= "arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('TEM101');">男子单打</a></p>
+                    <p><a href="" data-role="button" data-icon= "arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('TEX201' );">混合双打</a></p>
+            </div>
+            </br>
+            <div data-id="ScheduleByDate" data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d">
+                <h3>按比赛日程查看</h3>                    
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130610');">6月10日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130611');">6月11日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130612');">6月12日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130613');">6月13日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130614');">6月14日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130615');">6月15日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130616');">6月16日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130617');">6月17日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130618');">6月18日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130722');">7月22日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130723');">7月23日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130724');">7月24日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130725');">7月25日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130726');">7月26日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130727');">7月27日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130728');">7月28日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130729');">7月29日</a></p>
+                    <p><a href ="" data-role="button" data-icon="arrow-r" data-iconpos="right" onclick="App.Modules.Schedule.Load('20130730');">7月30日</a></p>
+            </div>                  
+        </div>    
+        <div data-id="footer" data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul >
+                    <li><a href="#pageIntroduce" data-transition="flow" data-direction="reverse">项目简介</a></li>
+                    <li><a href="#pageSchedule" class="ui-btn-active ui-state-persist">单项成绩</a></li>
+                    <li><a href="#pageMember" data-transition="flow">参赛人员</a></li>
+                    <li><a href="#pageMedal" data-transition="flow">奖牌统计</a></li>
+                    <li><a href="#pageMore" data-transition="flow">更多</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="pageMember" data-role="page">
+        <div data-id="header"  data-role="header" data-theme="c" data-position="fixed">
+            <h1>运动员</h1>
+            <a href="#" data-role="button" data-align="left" data-rel="back" data-icon="back" data-iconpos="left" class="ui-btn-left">返回</a>
+            <a href="" data-role="button" data-align="right" data-icon="refresh" data-iconpos="right" class="ui-btn-right">刷新</a>
+        </div>    
+        <div id="TE_Member" data-role="content">
+            <div id="MemberByDelegation" data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d">
+                <h3>按代表团查询</h3>
+                <p id = "lstAthleteByDelegation"></p>
+            </div>                  
+            </br>
+            <div data-id="MemberByName" data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d">
+                <h3>按姓名查询</h3>
+                    <p>
+                        <label for="SearchMember" class="ui-hidden-accessible">姓名：</label>
+                        <input type = "text" name="SearchMember" id="SearchMember" placeholder="请输入运动员姓名。。。" onkeyup = "App.Modules.Delegation.SearchMember(this.value);">
+                        <div id = "ShowSearchMember"></div>
+                    </p>
+            </div>                  
+        </div>   
+        <div data-id="footer" data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul >
+                    <li><a href="#pageIntroduce" data-transition="flow" data-direction="reverse">项目简介</a></li>
+                    <li><a href="#pageSchedule" data-transition="flow" data-direction="reverse">单项成绩</a></li>
+                    <li><a href="#pageMember"  class="ui-btn-active ui-state-persist">参赛人员</a></li>
+                    <li><a href="#pageMedal" data-transition="flow">奖牌统计</a></li>
+                    <li><a href="#pageMore" data-transition="flow">更多</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="pageMedal" data-role="page">
+        <div data-id="header"  data-role="header" data-theme="c" data-position="fixed">
+            <h1>奖牌 / 积分</h1>
+            <a href="#" data-role="button" data-align="left" data-rel="back" data-icon="back" data-iconpos="left" class="ui-btn-left">返回</a>
+            <a href="" data-role="button" data-align="right" data-icon="refresh" data-iconpos="right" class="ui-btn-right">刷新</a>
+        </div>
+            
+        <div id="TE_Medal" data-role="content">
+        </div>      
+
+        <div data-id="footer" data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul >
+                    <li><a href="#pageIntroduce" data-transition="flow" data-direction="reverse">项目简介</a></li>
+                    <li><a href="#pageSchedule" data-transition="flow" data-direction="reverse">单项成绩</a></li>
+                    <li><a href="#pageMember" data-transition="flow" data-direction="reverse">参赛人员</a></li>
+                    <li><a href="#pageMedal"  class="ui-btn-active ui-state-persist">奖牌统计</a></li>
+                    <li><a href="#pageMore" data-transition="flow">更多</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="pageMore" data-role="page">
+        <div data-id="header"  data-role="header" data-theme="c" data-position="fixed">
+        <a href="#" data-role="button" data-align="left" data-rel="back" data-icon="back" data-iconpos="left" class="ui-btn-left">返回</a>
+            <a href="" data-role="button" data-align="right" data-icon="refresh" data-iconpos="right" class="ui-btn-right">刷新</a>
+            <h1>更多选项</h1>
+        </div>
+            
+        <div id="TE_More" data-role="content">
+            <div data-id="Introduce" data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d" >
+                <h3>关于</h3>
+                    <p></p>
+                </div>
+            </br>
+            <div data-id="SportRule" data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d">
+                <h3>版权</h3>
+                    <p></p>
+            </div>            
+        </div>      
+
+        <div data-id="footer" data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul >
+                    <li><a href="#pageIntroduce" data-transition="flow" data-direction="reverse">项目简介</a></li>
+                    <li><a href="#pageSchedule" data-transition="flow" data-direction="reverse">单项成绩</a></li>
+                    <li><a href="#pageMember" data-transition="flow" data-direction="reverse">参赛人员</a></li>
+                    <li><a href="#pageMedal" data-transition="flow" data-direction="reverse">奖牌统计</a></li>
+                    <li><a href="#pageMore"  class="ui-btn-active ui-state-persist">更多</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="Schedule" data-role="page">
+        <div data-id="header"  data-role="header" data-theme="c" data-position="fixed">
+            <a href="#" data-role="button" data-align="left" data-rel="back" data-icon="back" data-iconpos="left" class="ui-btn-left">返回</a>
+            <a href="" data-role="button" data-align="right" data-icon="refresh" data-iconpos="right" class="ui-btn-right">刷新</a>
+            <h1>竞赛计划</h1>
+        </div>            
+        <div id="Schedule_Detail" data-role="content">            
+        </div>      
+        <div data-id="footer" data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul >
+                    <li><a href="#pageIntroduce" data-transition="flow" data-direction="reverse">项目简介</a></li>
+                    <li><a href="#pageSchedule" class="ui-btn-active ui-state-persist">单项成绩</a></li>
+                    <li><a href="#pageMember" data-transition="flow">参赛人员</a></li>
+                    <li><a href="#pageMedal" data-transition="flow">奖牌统计</a></li>
+                    <li><a href="#pageMore" data-transition="flow">更多</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="ScheduleDetail" data-role="page">
+        <div data-id="header"  data-role="header" data-theme="c" data-position="fixed">
+            <a href="#" data-role="button" data-align="left" data-rel="back" data-icon="back" data-iconpos="left" class="ui-btn-left">返回</a>
+            <a href="" data-role="button" data-align="right" data-icon="refresh" data-iconpos="right" class="ui-btn-right">刷新</a>
+            <h1>成绩公告</h1>
+        </div>            
+        <div id="ScheduleDetailShow" data-role="content">            
+        </div>      
+        <div data-id="footer" data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul >
+                    <li><a href="#pageIntroduce" data-transition="flow" data-direction="reverse">项目简介</a></li>
+                    <li><a href="#pageSchedule" class="ui-btn-active ui-state-persist">单项成绩</a></li>
+                    <li><a href="#pageMember" data-transition="flow">参赛人员</a></li>
+                    <li><a href="#pageMedal" data-transition="flow">奖牌统计</a></li>
+                    <li><a href="#pageMore" data-transition="flow">更多</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="Member" data-role="page">
+        <div data-id="header"  data-role="header" data-theme="c" data-position="fixed">
+            <h1>运动员</h1>
+            <a href="#" data-role="button" data-align="left" data-rel="back" data-icon="back" data-iconpos="left" class="ui-btn-left">返回</a>
+            <a href="" data-role="button" data-align="right" data-icon="refresh" data-iconpos="right" class="ui-btn-right">刷新</a>
+        </div>    
+        <div id="MemberDetail" data-role="content">
+        </div>
+        <div data-id="footer" data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul >
+                    <li><a href="#pageIntroduce" data-transition="flow" data-direction="reverse">项目简介</a></li>
+                    <li><a href="#pageSchedule" data-transition="flow" data-direction="reverse">单项成绩</a></li>
+                    <li><a href="#pageMember"  class="ui-btn-active ui-state-persist">参赛人员</a></li>
+                    <li><a href="#pageMedal" data-transition="flow">奖牌统计</a></li>
+                    <li><a href="#pageMore" data-transition="flow">更多</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="MedalByDelegation" data-role="page">
+        <div data-id="header"  data-role="header" data-theme="c" data-position="fixed">
+            <h1>奖牌 / 积分 - 代表团</h1>
+            <a href="#" data-role="button" data-align="left" data-rel="back" data-icon="back" data-iconpos="left" class="ui-btn-left">返回</a>
+            <a href="" data-role="button" data-align="right" data-icon="refresh" data-iconpos="right" class="ui-btn-right">刷新</a>
+        </div>
+            
+        <div id="MedalByDelegationDetail" data-role="content">
+        </div>      
+
+        <div data-id="footer" data-role="footer" data-position="fixed" data-theme="c">
+            <div data-role="navbar">
+                <ul >
+                    <li><a href="#pageIntroduce" data-transition="flow" data-direction="reverse">项目简介</a></li>
+                    <li><a href="#pageSchedule" data-transition="flow" data-direction="reverse">单项成绩</a></li>
+                    <li><a href="#pageMember" data-transition="flow" data-direction="reverse">参赛人员</a></li>
+                    <li><a href="#pageMedal"  class="ui-btn-active ui-state-persist">奖牌统计</a></li>
+                    <li><a href="#pageMore" data-transition="flow">更多</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+ </html>

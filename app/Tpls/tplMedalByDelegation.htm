@@ -1,0 +1,221 @@
+﻿<ul data-role="listview">
+    <li data-role="list-divider" data-theme = "e">
+        <center>
+            <div class = "ui-grid-b">
+                <div class = "ui-block-a"><u><%=tplData.MedalByDelegationList[0].BASE1_DelegationName %></u></div>
+                <div class = "ui-block-b"><img src="image/Medal/ico-total.gif" /><h3><%=tplData.MedalByDelegationList[0].TTotal %></h3></div>
+                <div class = "ui-block-c"><img src="image/Medal/ico-score.jpg" /><h3><%=tplData.MedalByDelegationList[0].TScore %></h3></div>
+                <div class = "ui-block-a"><img src="image/Medal/ico-gold.gif" /><h3><%=tplData.MedalByDelegationList[0].TGold %></h3></div>
+                <div class = "ui-block-b"><img src="image/Medal/ico-silver.gif" /><h3><%=tplData.MedalByDelegationList[0].TSilver %></h3></div>
+                <div class = "ui-block-c"><img src="image/Medal/ico-brone.gif" /><h3><%=tplData.MedalByDelegationList[0].TBronze %></h3></div>
+            </div>
+        </center>
+    </li>
+    <li>
+        <div data-role="collapsible-set">                
+	        <div data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d">
+                <h3>奖牌分布</h3>
+                <p>
+                    <ul data-role="listview">
+                        <%if (tplData.MedalByDelegationList[0].OTotal !=0) {%>
+                            <li data-role="list-divider" data-theme = "e">
+                                <center>
+                                    <div class = "ui-grid-d">
+                                        <div class = "ui-block-a"><u>本代表团奥运计入</u></div>
+                                        <div class = "ui-block-b"><img src="image/Medal/ico-gold.gif" /><h3><%=tplData.MedalByDelegationList[0].OGold %></h3></div>
+                                        <div class = "ui-block-c"><img src="image/Medal/ico-silver.gif" /><h3><%=tplData.MedalByDelegationList[0].OSilver %></h3></div>
+                                        <div class = "ui-block-d"><img src="image/Medal/ico-brone.gif" /><h3><%=tplData.MedalByDelegationList[0].OBronze %></h3></div>
+                                        <div class = "ui-block-e"><img src="image/Medal/ico-total.gif" /><h3><%=tplData.MedalByDelegationList[0].OTotal %></h3></div>
+                                    </div>
+                                </center>
+                            </li> 
+                        <%} %>
+                        <%if (tplData.MedalByDelegationList[1].TTotal !=0) {%>
+                            <li data-role="list-divider" data-theme = "e">
+                                <center>
+                                    <div class = "ui-grid-d">
+                                        <div class = "ui-block-a"><u>冬运计入</u></div>                                        
+                                        <div class = "ui-block-b"><img src="image/Medal/ico-gold.gif" /><h3><%=tplData.MedalByDelegationList[1].TGold %></h3></div>
+                                        <div class = "ui-block-c"><img src="image/Medal/ico-silver.gif" /><h3><%=tplData.MedalByDelegationList[1].TSilver %></h3></div>
+                                        <div class = "ui-block-d"><img src="image/Medal/ico-brone.gif" /><h3><%=tplData.MedalByDelegationList[1].TBronze %></h3></div>
+                                        <div class = "ui-block-e"><img src="image/Medal/ico-total.gif" /><h3><%=tplData.MedalByDelegationList[1].TTotal %></h3></div>
+                                    </div>
+                                </center>
+                            </li> 
+                        <%} %>
+                        <%if (tplData.MedalByDelegationList[2].TTotal !=0) {%>
+                            <li data-role="list-divider" data-theme = "e">
+                                <center>
+                                    <div class = "ui-grid-d">
+                                        <div class = "ui-block-a"><u>本赛会两次计分</u></div>
+                                        <div class = "ui-block-b"><img src="image/Medal/ico-gold.gif" /><h3><%=tplData.MedalByDelegationList[2].TGold %></h3></div>
+                                        <div class = "ui-block-c"><img src="image/Medal/ico-silver.gif" /><h3><%=tplData.MedalByDelegationList[2].TSilver %></h3></div>
+                                        <div class = "ui-block-c"><img src="image/Medal/ico-brone.gif" /><h3><%=tplData.MedalByDelegationList[2].TBronze %></h3></div>
+                                        <div class = "ui-block-e"><img src="image/Medal/ico-total.gif" /><h3><%=tplData.MedalByDelegationList[2].TTotal %></h3></div>
+                                    </div>
+                                </center>
+                            </li> 
+                        <%} %>
+                        <li data-role="list-divider" data-theme = "b">
+                            <center>
+                                <div class = "ui-grid-d">
+                                    <div class = "ui-block-a"><u>比赛项目</u></div>
+                                    <div class = "ui-block-b"><img src="image/Medal/ico-gold.gif" /></div>
+                                    <div class = "ui-block-c"><img src="image/Medal/ico-silver.gif" /></div>
+                                    <div class = "ui-block-d"><img src="image/Medal/ico-brone.gif" /></div>
+                                    <div class = "ui-block-e"><img src="image/Medal/ico-total.gif" /></div>
+                                </div>
+                            </center>
+                        </li>
+                        <li>
+                            <div data-role = "collapsible-set">
+                                <% for(var i=0; i<tplData.RankDetailByDelegationList.length; i++) {
+                                    var aItem = tplData.RankDetailByDelegationList[i];%>
+                                    <div data-role = "collapsible"data-iconpos="right" data-collapsed-icon="arrow-d">
+                                        <h3>
+                                            <center>
+                                                <div class = "ui-grid-d">
+                                                    <div class = "ui-block-a"><u><%if (i==tplData.RankDetailByDelegationList.length-1) {%>合计<%} else { %><%=aItem.BASE1_DisciplineName %><%} %></u></div>
+                                                    <div class = "ui-block-b"><%=aItem.Row1[0].Row2[0].Gold %></div>
+                                                    <div class = "ui-block-c"><%=aItem.Row1[0].Row2[0].Silver %></div>
+                                                    <div class = "ui-block-d"><%=aItem.Row1[0].Row2[0].Bronze %></div>
+                                                    <div class = "ui-block-e"><%=aItem.Row1[0].Row2[0].Total %></div>
+                                                </div>
+                                            </center>
+                                        </h3>
+                                        <p>
+                                            <%if (i<tplData.RankDetailByDelegationList.length-1) {%>
+                                                <ul data-role = "listview">
+                                                    <li data-role = "list-divider" data-theme = "e">
+                                                        <center>
+                                                            <div class = "ui-grid-b">
+                                                                <div class = "ui-block-a"><%=aItem.BASE1_DisciplineName %>小项</div>
+                                                                <div class = "ui-block-b">奖牌*数目</div>
+                                                                <div class = "ui-block-c">参赛运动员</div>
+                                                            </div>
+                                                        </center>
+                                                    </li>
+                                                    <%for(var j=1; j<aItem.Row1.length; j++) {
+                                                        var bItem = aItem.Row1[j];%>
+                                                        <%for(var k=0; k<bItem.Row2.length; k++){ 
+                                                            var cItem = bItem.Row2[k];%>
+                                                            <li data-role = "list-divider" data-theme = "b">
+                                                                <center>
+                                                                    <div class = "ui-grid-b">
+                                                                        <div class = "ui-block-a"><u><%=bItem.BASE1_EventName %></u></div>
+                                                                        <div class = "ui-block-b">
+                                                                            <%if(cItem.Gold > 0) {%>
+                                                                            <img src="image/Medal/ico-gold.gif" />金*<%= cItem.Gold%>
+                                                                            <%} else if (cItem.Silver > 0){%>
+                                                                            <img src="image/Medal/ico-silver.gif" />银*<%= cItem.Silver%>
+                                                                            <%} else if (cItem.Bronze > 0){ %>
+                                                                            <img src="image/Medal/ico-brone.gif" />铜*<%= cItem.Bronze%>
+                                                                            <%} %>
+                                                                        </div>
+                                                                        <div class = "ui-block-c">
+                                                                            <%for (var m=0; m<cItem.Row3.length; m++){ 
+                                                                                var dItem = cItem.Row3[m];%>
+                                                                                 <a href="" onclick="App.Modules.Delegation.MemberLoad(<%=dItem.SEQ_PersonID %>);"> <%=dItem.SEQ_PersonName %></a> 
+                                                                            <%} %>
+                                                                        </div>
+                                                                    </div>
+                                                                </center>
+                                                            </li>
+                                                        <%} %>
+                                                    <%} %>
+                                                </ul>
+                                            <%} %>
+                                        </p>
+                                    </div>
+                                <%} %>
+                            </div>
+                        </li>
+                    </ul>                    
+                </p>
+            </div>
+            <div data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d">
+                <h3>总分分布</h3>
+                <p>
+                    <ul data-role="listview">
+                        <%if (tplData.MedalByDelegationList[0].OScore !=0) {%>
+                            <li data-role="list-divider" data-theme = "e">
+                                <center><u>本代表团奥运计入<%=tplData.MedalByDelegationList[0].OScore %>分</u></center>
+                            </li> 
+                        <%} %>
+                        <%if (tplData.MedalByDelegationList[1].TScore !=0) {%>
+                            <li data-role="list-divider" data-theme = "e">
+                                <center><u>冬运计入<%=tplData.MedalByDelegationList[1].TScore %>分</u></center>
+                            </li> 
+                        <%} %>
+                        <%if (tplData.MedalByDelegationList[2].TScore !=0) {%>
+                            <li data-role="list-divider" data-theme = "e">
+                                <center><u>本赛会两次计分获得<%=tplData.MedalByDelegationList[2].TScore %>分</u></center>
+                            </li> 
+                        <%} %>
+                        <li data-role="list-divider" data-theme = "b">
+                            <center>
+                                <div class = "ui-grid-a">
+                                    <div class = "ui-block-a"><u>比赛项目</u></div>
+                                    <div class = "ui-block-b"><u>各大项得分</u></div>
+                                </div>
+                            </center>
+                        </li>
+                        <li>
+                            <div data-role = "collapsible-set">
+                                <%for(var i=0; i<tplData.RankDetailScoreByDelegationList.length; i++) {
+                                    var aItem = tplData.RankDetailScoreByDelegationList[i];%>
+                                    <div data-role = "collapsible" data-iconpos="right" data-collapsed-icon="arrow-d">
+                                        <h3>
+                                            <center>
+                                                <div class = "ui-grid-a">
+                                                    <div class = "ui-block-a"><u><%if (i==tplData.RankDetailScoreByDelegationList.length-1) {%>合计<%} else { %><%=aItem.BASE1_DisciplineName %><%} %></u></div>
+                                                    <div class = "ui-block-b"><%=aItem.Row1[0].Score %></div>
+                                                </div>
+                                            </center>
+                                        </h3>
+                                        <p>
+                                            <%if (i<tplData.RankDetailScoreByDelegationList.length-1) {%>
+                                                <ul data-role = "listview" >
+                                                    <li data-role = "list-divider" data-theme = "e">
+                                                        <center>
+                                                            <div class = "ui-grid-d">
+                                                                <div class = "ui-block-a"><%=aItem.BASE1_DisciplineName %>小项</div>
+                                                                <div class = "ui-block-b">成绩</div>
+                                                                <div class = "ui-block-c">名次/得分数</div>
+                                                                <div class = "ui-block-d">参赛运动员</div>
+                                                                <div class = "ui-block-e">日期</div>
+                                                            </div>
+                                                        </center>
+                                                    </li>
+                                                    <%for(var j=1; j<aItem.Row1.length; j++) {
+                                                        var bItem = aItem.Row1[j];%>
+                                                        <li data-role = "list-divider" data-theme = "b">
+                                                            <center>
+                                                                <div class = "ui-grid-d">
+                                                                    <div class = "ui-block-a"><%=bItem.BASE1_EventName %></div>
+                                                                    <div class = "ui-block-b"><%if(bItem.Result != null){ %><%=bItem.Result %><%} %></div>
+                                                                    <div class = "ui-block-c"><%=bItem.Rank %> / <%=bItem.Score %></div>
+                                                                    <div class = "ui-block-d">
+                                                                        <%for (var k=0; k<bItem.Row2.length; k++){ 
+                                                                            var cItem = bItem.Row2[k];%>
+                                                                                <a href="" onclick="App.Modules.Delegation.MemberLoad(<%=cItem.SEQ_PersonID %>);"> <%=cItem.SEQ_PersonName %></a> 
+                                                                        <%} %>
+                                                                    </div>
+                                                                    <div class = "ui-block-e"><%=bItem.Date %></div>
+                                                                </div>
+                                                            </center>
+                                                        </li>
+                                                    <%} %>
+                                                </ul>
+                                            <%} %>
+                                        </p>
+                                    </div>
+                                <%} %>
+                            </div>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </li>
+ </ul> 

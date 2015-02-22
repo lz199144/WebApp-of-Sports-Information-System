@@ -1,0 +1,119 @@
+﻿<div data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d">
+    <h3>综合成绩榜</center></h3>             
+    <p>                       
+        <ul data-role="listview">
+            <li data-role="list-divider"  data-theme = "e">
+                <center>
+                    <div class="ui-grid-c">
+                        <div class="ui-block-a">排名</div>
+                        <div class="ui-block-b">代表团</div>
+                        <div class="ui-block-c">总分</div>
+                        <div class="ui-block-d"><img src="image/Medal/ico-total.gif" /></div>
+                        <div class="ui-block-a"></div>
+                        <div class="ui-block-b"><img src="image/Medal/M1-GOLD.gif" /></div>                    
+                        <div class="ui-block-c"><img src="image/Medal/M2-SILVER.gif" /></div>
+                        <div class="ui-block-d"><img src="image/Medal/M3-BRONE.gif" /></div>
+                    </div>
+                </center>
+            </li>
+            <%for (var i=0; i<tplData.TotalMedalList.length; i++) {
+                    var aItem = tplData.TotalMedalList[i];
+                    if (i<tplData.TotalMedalList.length-1){%>
+                        <li>
+                            <center>                
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a"><%=aItem.Rank %></div>
+                                    <div class="ui-block-b">
+                                        <a href="" onclick="App.Modules.Medal.MedalByDelegationLoad(<%=aItem.BASE1_DelegationID %>);">
+                                            <%=aItem.BASE1_DelegationName %>
+                                        </a>
+                                    </div>
+                                    <div class="ui-block-c"><%=aItem.Score %></div>
+                                    <div class="ui-block-d"><%=aItem.Total %></div>
+                                    <div class="ui-block-a"></div>
+                                    <div class="ui-block-b"><%=aItem.Gold %></div>                    
+                                    <div class="ui-block-c"><%=aItem.Silver %></div>
+                                    <div class="ui-block-d"><%=aItem.Bronze %></div>
+                                </div>
+                            </center>
+                        </li>
+                    <%} else{ %>
+                        <li>
+                            <center>                
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a"></div>
+                                    <div class="ui-block-b">合计</div>
+                                    <div class="ui-block-c"><%=aItem.Score %></div>
+                                    <div class="ui-block-d"><%=aItem.Total %></div>
+                                    <div class="ui-block-a"></div>
+                                    <div class="ui-block-b"><%=aItem.Gold %></div>                    
+                                    <div class="ui-block-c"><%=aItem.Silver %></div>
+                                    <div class="ui-block-d"><%=aItem.Bronze %></div>
+                                </div>
+                            </center>
+                        </li>
+                    <%} %>
+        <%} %>
+    </ul> 
+    </p>
+</div> 
+</br>
+<div data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d">
+    <h3>网球单项榜</center></h3>             
+    <p>                       
+        <ul data-role="listview">
+            <li data-role="list-divider"  data-theme = "e">
+                <center>
+                    <div class="ui-grid-c">
+                        <div class="ui-block-a">排名</div>
+                        <div class="ui-block-b">代表团</div>
+                        <div class="ui-block-c">总分</div>
+                        <div class="ui-block-d"><img src="image/Medal/ico-total.gif" /></div>
+                        <div class="ui-block-a"></div>
+                        <div class="ui-block-b"><img src="image/Medal/M1-GOLD.gif" /></div>                    
+                        <div class="ui-block-c"><img src="image/Medal/M2-SILVER.gif" /></div>
+                        <div class="ui-block-d"><img src="image/Medal/M3-BRONE.gif" /></div>
+                    </div>
+                </center>
+            </li>
+            <%for (var i=0; i<tplData.TEMedalList.length; i++) {
+                    var aItem = tplData.TEMedalList[i];
+                    if (i<tplData.TEMedalList.length-1){%>
+                        <li>
+                            <center>                
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a"><%=aItem.Rank %></div>
+                                    <div class="ui-block-b">
+                                        <a href="" onclick="App.Modules.Medal.MedalByDelegationLoad(<%=aItem.BASE1_DelegationID %>);">
+                                            <%=aItem.BASE1_DelegationName %>
+                                        </a>
+                                    </div>
+                                    <div class="ui-block-c"><%=aItem.Score %></div>
+                                    <div class="ui-block-d"><%=aItem.Total %></div>
+                                    <div class="ui-block-a"></div>
+                                    <div class="ui-block-b"><%=aItem.Gold %></div>                    
+                                    <div class="ui-block-c"><%=aItem.Silver %></div>
+                                    <div class="ui-block-d"><%=aItem.Bronze %></div>
+                                </div>
+                            </center>
+                        </li>
+                    <%} else{ %>
+                        <li>
+                            <center>                
+                                <div class="ui-grid-c">
+                                    <div class="ui-block-a"></div>
+                                    <div class="ui-block-b">合计</div>
+                                    <div class="ui-block-c"><%=aItem.Score %></div>
+                                    <div class="ui-block-d"><%=aItem.Total %></div>
+                                    <div class="ui-block-a"></div>
+                                    <div class="ui-block-b"><%=aItem.Gold %></div>                    
+                                    <div class="ui-block-c"><%=aItem.Silver %></div>
+                                    <div class="ui-block-d"><%=aItem.Bronze %></div>
+                                </div>
+                            </center>
+                        </li>
+                    <%} %>
+        <%} %>
+        </ul> 
+    </p>
+</div>

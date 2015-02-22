@@ -1,0 +1,60 @@
+﻿<ul data-role = "listview">
+    <li>
+        <img src="<%=tplData.AthletePhoto %>" />   
+        <div class="ui-grid-d">                        
+	        <div class="ui-block-a"><h2>代表团</h2></div>
+	        <div class="ui-block-b"><h2>姓名</h2></div>
+            <div class="ui-block-c"><h2>性别</h2></div>                        
+            <div class="ui-block-d"><h2>身高</h2></div>
+	        <div class="ui-block-e"><h2>体重</h2></div>
+            <div class="ui-block-a"><u><font color=red><%=tplData.Athlete.BASE1_DelegationLongName  %></font></u></div>
+	        <div class="ui-block-b"><u><%=tplData.Athlete.SEQ_PersonName %></u></div>
+            <div class="ui-block-c"><u><%=tplData.Athlete.BASE1_GenderName %></u></div>                        
+            <div class="ui-block-d"><u><%=tplData.Athlete.Height %>kg</u></div>
+	        <div class="ui-block-e"><u><%=tplData.Athlete.Weight %>cm</u></div>                                           
+        </div>
+    </li>
+    <li>
+        <img src="<%=tplData.DisciplinePhoto %>" />   
+        <div class="ui-grid-a">                        
+	        <div class="ui-block-a"><u>参赛项目</u></div>
+	        <div class="ui-block-b"><u>赛前报名参赛项目</u></div>
+            <div class="ui-block-a"><u><%=tplData.AthleteDiscipline %></u></div>                        
+            <div class="ui-block-b">
+                <%for( var i=0;i< tplData.AthleteReg.length;i++) { 
+                                var aItem = tplData.AthleteReg[i];  %>
+                                <%if (i > 0) {%><br /><%} %>
+                        <u><%=aItem.BASE1_EventLongName %></u>
+                <%} %>
+            </div>  
+        </div>
+    </li>
+    <li>
+        <h2>本届赛会得牌得分</h2>
+        <center>
+            <div class="ui-grid-d">                        
+	            <div class="ui-block-a">日期</div>
+	            <div class="ui-block-b">参赛项目</div>
+                <div class="ui-block-c">名次</div>                        
+                <div class="ui-block-d">奖牌</div>
+	            <div class="ui-block-e">得分</div>
+                <%for( var i=0;i< tplData.AthleteResult.length;i++) { 
+                        var aItem = tplData.AthleteResult[i];  %>
+                    <div class="ui-block-a"><%=aItem.RankDate %></div>
+	                <div class="ui-block-b"><%=aItem.BASE1_EventName %></div>
+                    <div class="ui-block-c"><%=aItem.Rank %></div>                        
+                    <div class="ui-block-d">
+                        <%if(aItem.Rank == 1)  {%>
+                            <img src="image/Medal/ico-gold.gif" />金*1
+                        <%} else if (aItem.Rank == 2){ %>
+                            <img src="image/Medal/ico-silver.gif" />银*1
+                        <%} else if (aItem.Rank == 3){ %>
+                            <img src="image/Medal/ico-brone.gif" />铜*1
+                        <%} %>
+                    </div>
+	                <div class="ui-block-e"><%=aItem.Score %></div>
+                <%} %>                                            
+            </div>
+        </center>
+    </li>
+</ul>

@@ -1,0 +1,15 @@
+﻿    <div data-role="collapsible-set">
+        <%for( var i=0;i< tplData.length;i++) { 
+                    var aItem = tplData[i];  %>
+                    <div data-role="collapsible" data-iconpos="right" data-collapsed-icon="arrow-d">
+	                    <h3><center><%=aItem.BASE1_DelegationShortName %></center></h3>
+                            <ul data-role="listview">
+                            <%for( var j=0;j< aItem.Row2.length;j++) { 
+                                    var bItem = aItem.Row2[j];  %>                                                                          
+                                        <a href="#" data-mini = true data-theme="e" data-role="button"  data-icon= "arrow-r" data-iconpos="right" 
+                                        onclick="App.Modules.Delegation.MemberLoad(<%=bItem.SEQ_PersonID %>);"><%=bItem.SEQ_PersonName %></a>
+                            <%} %>
+                            </ul>
+                   </div>
+        <%} %>
+    </div>

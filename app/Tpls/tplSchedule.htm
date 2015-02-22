@@ -1,0 +1,26 @@
+﻿            <ul data-role="listview">
+            <% for( var i=0;i< tplData.length;i++) { 
+                var aItem = tplData[i];
+            %>
+                <li>
+                <a href="#" <%if (aItem.LiveReportDataID != null) {%> 
+                onclick="App.Modules.Schedule.DetailLoad(<%=aItem.LiveReportDataID %>);"
+                <%} %>
+                >
+                    <h6><%=aItem.BASE1_EventShortName  %><%=aItem.CRS_ScheduleName  %></h6>
+                    <%if (aItem.StartDate == aItem.EndDate) {%>
+                    <p>时间：<%=aItem.StartDate  %> <%=aItem.StartTime  %></p>
+                    <%} else{ %>
+                    <p>时间：<%=aItem.StartDate  %> ~ <%=aItem.EndDate  %> <%=aItem.StartTime  %></p>
+                    <%}%>
+                    <p>报表：<%=aItem.Row2[0].PrintName %>  更新状态:
+                   <%if (aItem.Row2[0].IsOfficial == true){;%>
+                          官方</p>
+                   <%}else {%>
+                         非官方</p>
+                    <%} %>                    
+                    <p>比赛场馆：<%=aItem.BASE1_VenueShortName  %></p>                    
+                </a></li> 
+            <%} %>            
+            </ul>
+
